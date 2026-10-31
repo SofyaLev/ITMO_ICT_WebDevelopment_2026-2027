@@ -1,0 +1,1433 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Отчёты по лабораторным работам">
+      
+      
+      
+      
+        <link rel="prev" href="../../lr2/report/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Отчёт - Веб-программирование. Левчук Софья. K3341</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-django-django-rest-framework" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Веб-программирование. Левчук Софья. K3341" class="md-header__button md-logo" aria-label="Веб-программирование. Левчук Софья. K3341" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Веб-программирование. Левчук Софья. K3341
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Отчёт
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Веб-программирование. Левчук Софья. K3341" class="md-nav__button md-logo" aria-label="Веб-программирование. Левчук Софья. K3341" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Веб-программирование. Левчук Софья. K3341
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛР1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ЛР1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отчёт
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛР2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ЛР2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отчёт
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЛР3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ЛР3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отчёт
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отчёт
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Модель данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Эндпоинты
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Эндпоинты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crud-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CRUD по сущностям (api/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вложенные GET-запросы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#djoser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Авторизация (Djoser, токены)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аналитические запросы (по варианту 18)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Реализованные запросы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Реализованные запросы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Список договоров
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Договор с вложенными объектами - многие-ко-многим
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Организация с вложенными договорами - один-ко-многим
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Создание агента
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Создание индивидуального договора
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Частичное обновление
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Удаление
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8 Регистрация пользователя
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.9 Получение токена
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10 Текущий пользователь
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.11 Аналитика: организации тех же агентов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.12 Аналитика: договоры каждого типа по агентам за период
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.13 Аналитика: коллеги по коллективному договору
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.14 Аналитика: суммы выплат по типам договоров
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.15 Аналитика: отчет по юридическим лицам
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.16 Аналитика: сводный отчет по фирме
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Модель данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Эндпоинты
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Эндпоинты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crud-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CRUD по сущностям (api/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вложенные GET-запросы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#djoser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Авторизация (Djoser, токены)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аналитические запросы (по варианту 18)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Реализованные запросы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Реализованные запросы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Список договоров
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Договор с вложенными объектами - многие-ко-многим
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Организация с вложенными договорами - один-ко-многим
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Создание агента
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Создание индивидуального договора
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Частичное обновление
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Удаление
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8 Регистрация пользователя
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.9 Получение токена
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10 Текущий пользователь
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.11 Аналитика: организации тех же агентов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.12 Аналитика: договоры каждого типа по агентам за период
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.13 Аналитика: коллеги по коллективному договору
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.14 Аналитика: суммы выплат по типам договоров
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.15 Аналитика: отчет по юридическим лицам
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.16 Аналитика: сводный отчет по фирме
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="3-django-django-rest-framework">ЛР3. Серверная часть приложения на Django и Django REST Framework</h1>
+<p><strong>Задание:</strong> Реализовать серверную часть приложения, используя фреймворк Django, Django REST Framework, Djoser и СУБД PostgreSQL, в соответствии с вариантом задания.</p>
+<p><strong>Цель:</strong> овладеть практическими навыками по реализации REST API средствами Django REST Framework.</p>
+<p><strong>Стек:</strong> Python 3.14, Django 5.2, Django REST Framework, Djoser, PostgreSQL</p>
+<p><strong>Вариант 18 - Страхование</strong> - система управления договорами страхования с физическими лицами и юридическими организациями.</p>
+<hr />
+<h2 id="1">1. Модель данных</h2>
+<table>
+<thead>
+<tr>
+<th>Модель</th>
+<th>Описание</th>
+<th>Ключевые поля</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Agent</strong></td>
+<td>Страховой агент</td>
+<td><code>first_name</code>, <code>last_name</code>, <code>middle_name</code>, <code>passport_series</code>, <code>passport_number</code>, <code>phone</code>, <code>email</code></td>
+</tr>
+<tr>
+<td><strong>EmploymentContract</strong></td>
+<td>Трудовой договор с агентом (прием/увольнение)</td>
+<td><code>agent</code> (FK), <code>hire_date</code>, <code>fire_date</code> (NULL = агент работает)</td>
+</tr>
+<tr>
+<td><strong>Organization</strong></td>
+<td>Организация для коллективного договора</td>
+<td><code>code</code>, <code>full_name</code>, <code>short_name</code>, <code>address</code>, <code>bank_number</code>, <code>specialization</code></td>
+</tr>
+<tr>
+<td><strong>Individual</strong></td>
+<td>Физическое лицо</td>
+<td>ФИО, <code>birth_date</code>; возраст - вычисляемое свойство <code>age</code></td>
+</tr>
+<tr>
+<td><strong>RiskCategory</strong></td>
+<td>Категория риска</td>
+<td><code>name</code> (первая, вторая, высшая и т.п.)</td>
+</tr>
+<tr>
+<td><strong>Contract</strong></td>
+<td>Страховой договор</td>
+<td><code>contract_type</code> (individual / collective), <code>conclusion_date</code>, <code>start_date</code>, <code>end_date</code>, <code>agent</code> (FK), <code>organization</code> (FK, nullable), <code>individual</code> (FK, nullable)</td>
+</tr>
+<tr>
+<td><strong>ContractTariff</strong></td>
+<td>Тариф: сумма выплат по категории риска (промежуточная модель m2m)</td>
+<td><code>contract</code> (FK), <code>risk_category</code> (FK), <code>payout_amount</code></td>
+</tr>
+<tr>
+<td><strong>InsuredPerson</strong></td>
+<td>Застрахованный сотрудник в договоре (промежуточная модель m2m)</td>
+<td><code>contract</code> (FK), <code>individual</code> (FK), <code>risk_category</code> (FK)</td>
+</tr>
+<tr>
+<td><strong>InsuranceCase</strong></td>
+<td>Страховой случай</td>
+<td><code>insured_person</code> (FK), <code>case_date</code>, <code>reason</code>, <code>decision</code> (paid / denied / pending), <code>payout_amount</code> (NULL, если отказ)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Связи:</strong></p>
+<ul>
+<li><code>Contract.agent -&gt; Agent</code> (многие-к-одному) - каждый договор заключает ровно один агент</li>
+<li><code>Contract.organization -&gt; Organization</code> (многие-к-одному, nullable) - заполняется у коллективного договора</li>
+<li><code>Contract.individual -&gt; Individual</code> (многие-к-одному, nullable) - заполняется у индивидуального договора</li>
+<li><code>Contract ↔ RiskCategory</code> (многие-ко-многим <strong>через</strong> <code>ContractTariff</code>) - договор задает сумму выплат по каждой категории</li>
+<li><code>Contract ↔ Individual</code> (многие-ко-многим <strong>через</strong> <code>InsuredPerson</code>) - в договоре оформлено несколько сотрудников</li>
+<li><code>EmploymentContract.agent -&gt; Agent</code> (многие-к-одному) - история приема и увольнения агентов</li>
+<li><code>InsuranceCase.insured_person -&gt; InsuredPerson</code> (многие-к-одному)</li>
+</ul>
+<p><strong>Разделение данных:</strong></p>
+<ul>
+<li>Коллективный и индивидуальный договоры - одна модель <code>Contract</code> с полем <code>contract_type</code> (choices) и двумя необязательными FK: у коллективного заполнена <code>organization</code>, у индивидуального - <code>individual</code></li>
+<li>Постоянные данные человека (ФИО, дата рождения) - в <code>Individual</code>; переменные данные участия в конкретном договоре (категория риска) - в <code>InsuredPerson</code></li>
+<li>Сумма выплат по категории сотрудника - в <code>ContractTariff</code>; фактическая выплата по страховому случаю - в <code>InsuranceCase.payout_amount</code></li>
+<li>Работающий агент - <code>fire_date IS NULL</code>; действующий договор - <code>start_date &lt;= сегодня &lt;= end_date</code></li>
+<li>Все FK - <code>on_delete=CASCADE</code> с <code>related_name</code> (используется в запросах, например <code>contracts__</code>, <code>insured_persons__</code>)</li>
+</ul>
+<hr />
+<h2 id="2">2. Эндпоинты</h2>
+<h3 id="crud-api">CRUD по сущностям (<code>api/</code>)</h3>
+<p>Views на дженериках DRF: <code>ListCreateAPIView</code> (GET / POST) и <code>RetrieveUpdateDestroyAPIView</code> (GET / PUT / PATCH / DELETE одного объекта).</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Сущность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/api/agents/</code> + <code>/api/agents/&lt;pk&gt;/</code></td>
+<td>Страховые агенты</td>
+</tr>
+<tr>
+<td><code>/api/employment-contracts/</code> + <code>/&lt;pk&gt;/</code></td>
+<td>Трудовые договоры (POST - принять агента, PATCH с <code>fire_date</code> - уволить)</td>
+</tr>
+<tr>
+<td><code>/api/organizations/</code> + <code>/&lt;pk&gt;/</code></td>
+<td>Организации</td>
+</tr>
+<tr>
+<td><code>/api/individuals/</code> + <code>/&lt;pk&gt;/</code></td>
+<td>Физические лица</td>
+</tr>
+<tr>
+<td><code>/api/risk-categories/</code> + <code>/&lt;pk&gt;/</code></td>
+<td>Категории риска</td>
+</tr>
+<tr>
+<td><code>/api/contracts/</code> + <code>/&lt;pk&gt;/</code></td>
+<td>Страховые договоры</td>
+</tr>
+<tr>
+<td><code>/api/tariffs/</code> + <code>/&lt;pk&gt;/</code></td>
+<td>Тарифы (суммы по категориям)</td>
+</tr>
+<tr>
+<td><code>/api/insured-persons/</code> + <code>/&lt;pk&gt;/</code></td>
+<td>Застрахованные сотрудники</td>
+</tr>
+<tr>
+<td><code>/api/insurance-cases/</code> + <code>/&lt;pk&gt;/</code></td>
+<td>Страховые случаи</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-">Вложенные GET-запросы</h3>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Что возвращает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/api/contracts/&lt;pk&gt;/nested/</code></td>
+<td>Договор со вложенными тарифами и застрахованными - связь многие-ко-многим</td>
+</tr>
+<tr>
+<td><code>/api/organizations/&lt;pk&gt;/nested/</code></td>
+<td>Организация со вложенными договорами - связь один-ко-многим</td>
+</tr>
+</tbody>
+</table>
+<h3 id="djoser">Авторизация (Djoser, токены)</h3>
+<p>Аутентификация DRF - <code>TokenAuthentication</code>. Регистрация и управление токенами - средствами Djoser:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>URL</th>
+<th>Что</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><code>/auth/users/</code></td>
+<td>регистрация</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/auth/token/login/</code></td>
+<td>получить token</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/auth/token/logout/</code></td>
+<td>выйти (отозвать token)</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/auth/users/me/</code></td>
+<td>текущий пользователь (по заголовку <code>Authorization: Token &lt;ключ&gt;</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="18">Аналитические запросы (по варианту 18)</h3>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Что возвращает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/api/analytics/organizations/&lt;id&gt;/same-agents/</code></td>
+<td>1. Другие организации, застрахованные теми же агентами, по действующим договорам</td>
+</tr>
+<tr>
+<td><code>/api/analytics/agents/contracts-count/?date_from=…&amp;date_to=…</code></td>
+<td>2. Количество договоров каждого типа у каждого агента за период</td>
+</tr>
+<tr>
+<td><code>/api/analytics/individuals/&lt;id&gt;/colleagues/</code></td>
+<td>3. Застрахованные того же действующего коллективного договора для персоны</td>
+</tr>
+<tr>
+<td><code>/api/analytics/payouts-by-type/?date_from=…&amp;date_to=…</code></td>
+<td>4. Общая сумма выплат по каждому типу договоров за период</td>
+</tr>
+<tr>
+<td><code>/api/analytics/organizations/report/</code></td>
+<td>5. Реквизиты договоров юрлиц и суммы выплат по категориям</td>
+</tr>
+<tr>
+<td><code>/api/analytics/firm-report/</code></td>
+<td>6. Сводный отчет: договоры по типам, суммы по агентам и по фирме</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3">3. Реализованные запросы</h2>
+<h3 id="31">3.1 Список договоров</h3>
+<p><code>GET /api/contracts/</code> - все 7 договоров. У коллективных (id 8–11) заполнено поле <code>organization</code> и <code>individual: null</code>, у индивидуальных (id 12–14) - наоборот.</p>
+<p><img alt="Список договоров" src="../images/01_get_contracts_list.png" /></p>
+<h3 id="32-">3.2 Договор с вложенными объектами - многие-ко-многим</h3>
+<p><code>GET /api/contracts/8/nested/</code> - коллективный договор с АО «Медик»: агент, реквизиты, вложенные <code>tariffs</code> (сумма выплат по каждой категории риска через <code>ContractTariff</code>) и <code>insured_persons</code> (застрахованные сотрудники через <code>InsuredPerson</code>).</p>
+<p>На скрине: три тарифа (Первая - 150 000, Вторая - 250 000, Высшая - 300 000) и три застрахованных сотрудника.</p>
+<p><img alt="Вложенный договор m2m" src="../images/02_get_contract_nested_m2m.png" /></p>
+<h3 id="33-">3.3 Организация с вложенными договорами - один-ко-многим</h3>
+<p><code>GET /api/organizations/6/nested/</code> - Университет ИТМО со всеми своими договорами (обратная связь <code>related_name='contracts'</code>).</p>
+<p>На скрине: два договора - действующий №10 (2026–2027, агент Петров) и просроченный №11 (2024, агент Иванов).</p>
+<p><img alt="Вложенная организация o2m" src="../images/03_get_organization_nested_o2m.png" /></p>
+<h3 id="34">3.4 Создание агента</h3>
+<p><code>POST /api/agents/</code> - ответ <code>201 Created</code> с созданным объектом.</p>
+<p><img alt="Создание агента" src="../images/04_post_create_agent.png" /></p>
+<h3 id="35">3.5 Создание индивидуального договора</h3>
+<p><code>POST /api/contracts/</code> - тип «Индивидуальный», агент и физлицо передаются по id. Ответ <code>201 Created</code>: <code>organization: null</code>, <code>individual</code> - выбранное физлицо.</p>
+<p><img alt="Создание договора" src="../images/05_post_create_contract.png" /></p>
+<h3 id="36">3.6 Частичное обновление</h3>
+<p><code>PATCH /api/agents/7/</code> - отправлено только одно поле <code>{"email": "..."}</code>.</p>
+<p>На скрине: ответ <code>200 OK</code>, возвращается полный объект агента, email обновлен.</p>
+<p><img alt="Частичное обновление" src="../images/06_patch_update_agent.png" /></p>
+<h3 id="37">3.7 Удаление</h3>
+<p><code>DELETE /api/contracts/15/</code> - ответ <code>204 No Content</code> с пустым телом. Затем удален и тестовый агент.</p>
+<p><img alt="Удаление договора" src="../images/07_delete_contract.png" /></p>
+<h3 id="38">3.8 Регистрация пользователя</h3>
+<p><code>POST /auth/users/</code> - регистрация через Djoser из PowerShell (POST-запрос с JSON-телом: username, email, password).</p>
+<p>На скрине: ответ с созданным пользователем.</p>
+<p><img alt="Регистрация Djoser" src="../images/08_djoser_register.png" /></p>
+<h3 id="39">3.9 Получение токена</h3>
+<p><code>POST /auth/token/login/</code> - обмен логина и пароля на токен.</p>
+<p>На скрине: ответ <code>{"auth_token": "..."}</code> - ключ для авторизации дальнейших запросов.</p>
+<p><img alt="Получение токена" src="../images/09_djoser_token_login.png" /></p>
+<h3 id="310">3.10 Текущий пользователь</h3>
+<p><code>GET /auth/users/me/</code> с заголовком <code>Authorization: Token &lt;ключ&gt;</code> - DRF находит пользователя по токену.</p>
+<p>На скрине: ответ с данными пользователя, выполнявшего запрос. Без заголовка тот же запрос возвращает <code>401 Unauthorized</code>.</p>
+<p><img alt="Текущий пользователь" src="../images/10_djoser_me.png" /></p>
+<h3 id="311">3.11 Аналитика: организации тех же агентов</h3>
+<p><code>GET /api/analytics/organizations/4/same-agents/</code> (запрос 1) - для АО «Медик» найдены другие организации, застрахованные теми же агентами по действующим договорам.</p>
+<p>На скрине: ГУП «Пассажиравтотранс» - общий агент Иванов, у него действующие договоры с обеими организациями. Просроченный договор в ответ не попадает.</p>
+<p><img alt="Организации тех же агентов" src="../images/11_query1_orgs_same_agents.png" /></p>
+<h3 id="312">3.12 Аналитика: договоры каждого типа по агентам за период</h3>
+<p><code>GET /api/analytics/agents/contracts-count/?date_from=2025-01-01&amp;date_to=2026-12-31</code>.</p>
+<p>На скрине: Иванов - 2 коллективных и 1 индивидуальный, Петров - 1 и 1, Сидоров - 0 и 1. Счетчики считаются одним запросом через <code>annotate(Count(..., filter=Q(...)))</code>; без параметров периода эндпоинт вернет <code>400</code> с подсказкой.</p>
+<p><img alt="Договоры по типам за период" src="../images/12_query2_agent_contracts_count.png" /></p>
+<h3 id="313">3.13 Аналитика: коллеги по коллективному договору</h3>
+<p><code>GET /api/analytics/individuals/11/colleagues/</code> - для Смирнова выведены все застрахованные его действующего коллективного договора.</p>
+<p>На скрине: договор №8 с АО «Медик», три сотрудника с возрастом и категорией риска. Индивидуальные договоры персоны в ответ не попадают.</p>
+<p><img alt="Коллеги по договору" src="../images/13_query3_person_colleagues.png" /></p>
+<h3 id="314">3.14 Аналитика: суммы выплат по типам договоров</h3>
+<p><code>GET /api/analytics/payouts-by-type/?date_from=2026-01-01&amp;date_to=2026-12-31</code>.</p>
+<p>На скрине: индивидуальные - 500 000, коллективные - 830 000. Случай с отказом (Васильев) сумму не искажает: у него <code>payout_amount = NULL</code>, а <code>Sum</code> игнорирует NULL.</p>
+<p><img alt="Выплаты по типам" src="../images/14_query4_payouts_by_type.png" /></p>
+<h3 id="315">3.15 Аналитика: отчет по юридическим лицам</h3>
+<p><code>GET /api/analytics/organizations/report/</code> - реквизиты каждого договора и суммы выплат по категориям риска.</p>
+<p>На скринах: АО «Медик» - договор №8 (итог 700 000), «Пассажиравтотранс» - №9 (730 000), ИТМО - №10 (420 000) и просроченный №11 (100 000).</p>
+<p><img alt="Отчет по организациям 1" src="../images/15a_query5_org_report.png" />
+<img alt="Отчет по организациям 2" src="../images/15b_query5_org_report.png" /></p>
+<h3 id="316">3.16 Аналитика: сводный отчет по фирме</h3>
+<p><code>GET /api/analytics/firm-report/</code> - действующие договоры каждого типа, суммы по каждому работающему агенту и итог по фирме.</p>
+<p>На скрине: Иванов - 2 коллективных + 1 индивидуальный (1 430 000 / 500 000), Петров - 1 + 1 (420 000 / 250 000). Уволенный Сидоров в список агентов не входит, но его действующий договор учтен в итоге фирмы: 3 + 3 договора, общая сумма 2 720 000.</p>
+<p><img alt="Сводный отчет по фирме" src="../images/16_query6_firm_report.png" /></p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
