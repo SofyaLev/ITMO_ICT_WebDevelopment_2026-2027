@@ -15,15 +15,15 @@ class Car(models.Model):
     brand = models.CharField(max_length=20)
     model_name = models.CharField(max_length=20)
     color = models.CharField(max_length=30, null=True, blank=True)
-    owners = models.ManyToManyField(CarOwner, through='Ownership')
+    owners = models.ManyToManyField(CarOwner, through='Ownership', related_name='cars')
 
     def __str__(self):
         return f'{self.brand} {self.model_name} ({self.plate_number})'
 
 
 class Ownership(models.Model):
-    owner = models.ForeignKey(CarOwner, on_delete=models.CASCADE)
-    car = models.ForeignKey(Car, on_delete=models.CASCADE)
+    owner = models.ForeignKey(CarOwner, on_delete=models.CASCADE, related_name='ownerships')
+    car = models.ForeignKey(Car, on_delete=models.CASCADE, related_name='ownerships')
     start_date = models.DateField()
     end_date = models.DateField(null=True, blank=True)
 
@@ -39,7 +39,7 @@ class DriverLicense(models.Model):
         ('E', 'Прицеп'),
     )
 
-    owner = models.ForeignKey(CarOwner, on_delete=models.CASCADE)
+    owner = models.ForeignKey(CarOwner, on_delete=models.CASCADE, related_name='driver_licenses')
     license_number = models.CharField(max_length=10)
     license_type = models.CharField(max_length=10, choices=LICENSE_TYPE)
     issue_date = models.DateField()

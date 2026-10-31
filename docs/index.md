@@ -8,3 +8,5 @@
 - [ЛР1. Работа с сокетами](lr1/report.md)
 
 - [ЛР2. Простой сайт на Django](lr2/report.md)
+
+- [ЛР3. Реализация серверной части приложения средствами Django и Django REST Framework](lr3/report.md)
