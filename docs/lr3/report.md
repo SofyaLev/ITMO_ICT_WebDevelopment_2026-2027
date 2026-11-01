@@ -12,6 +12,10 @@
 
 ## 1. Модель данных
 
+**Схема базы данных:**
+
+![Схема базы данных](images/db_schema.jpg)
+
 | Модель | Описание | Ключевые поля |
 |---|---|---|
 | **Agent** | Страховой агент | `first_name`, `last_name`, `middle_name`, `passport_series`, `passport_number`, `phone`, `email` |
